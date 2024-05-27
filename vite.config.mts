@@ -45,6 +45,7 @@ export default defineConfig({
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
   build: {
+    target: "esnext",
     assetsInlineLimit: 40960,
     minify: true,
     cssCodeSplit: false,
