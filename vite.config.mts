@@ -45,15 +45,16 @@ export default defineConfig({
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
   build: {
+    modulePreload: false,
     target: "esnext",
-    assetsInlineLimit: 40960,
-    minify: true,
+    // assetsInlineLimit: 40960,
+    minify: false,
     cssCodeSplit: false,
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        minifyInternalExports: false,
-      },
-    },
+    // sourcemap: true,
+    // rollupOptions: {
+    //   output: {
+    //     minifyInternalExports: false,
+    //   },
+    // },
   },
 });
