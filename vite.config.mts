@@ -34,6 +34,7 @@ export default defineConfig({
       exposes: {
         "./App": "./src/App.vue", //target component you want to serve as remote side. In our case is the entire application
       },
+      shared: { vue: { version: "^3.4.27" }, vuetify: { version: "^3.6.7" } },
       // shared: [{ vue: "^3.4.27" }, { vuetify: "^3.6.7" }], //we don't want to build our remote with a library the host side already have. So here we sinalize "hey, use this host side package"
     }),
   ],
