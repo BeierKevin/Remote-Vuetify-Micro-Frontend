@@ -46,16 +46,14 @@ export default defineConfig({
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
   build: {
-    modulePreload: false,
     target: "esnext",
-    // assetsInlineLimit: 40960,
-    minify: false,
-    cssCodeSplit: false,
-    // sourcemap: true,
-    // rollupOptions: {
-    //   output: {
-    //     minifyInternalExports: false,
-    //   },
-    // },
+    rollupOptions: {
+      preserveEntrySignatures: "exports-only",
+      external: ["vue", "vuetify"],
+      output: {
+        entryFileNames: "bundle.js",
+        format: "esm",
+      },
+    },
   },
 });
